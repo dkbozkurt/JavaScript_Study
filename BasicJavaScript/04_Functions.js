@@ -118,24 +118,3 @@ function addFive()
 
 addThree();
 addFive();
-
-// Comparison with the Equality Operator
-/*
-In order for JavaScript to compare two different data types (for example, numbers and strings), 
-it must convert one type to another. This is known as Type Coercion. Once it does, however, 
-it can compare terms as follows:
-
-1   ==  1  // true
-1   ==  2  // false
-1   == '1' // true
-"3" ==  3  // true
-*/
-
-function testEqual(val) {
-    if (val == "12") {
-        return "Equal";
-    }
-    return "Not Equal";
-}
-
-testEqual(10);
