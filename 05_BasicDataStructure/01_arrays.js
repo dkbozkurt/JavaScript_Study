@@ -165,3 +165,143 @@ function copyMachine(arr, num) {
 }
 
 console.log(copyMachine([true, false, true], 2));
+
+// Combine Arrays with the Spread Operator
+/*
+Another huge advantage of the spread operator is the ability to combine arrays, or 
+to insert all the elements of one array into another, at any index. With more 
+traditional syntaxes, we can concatenate arrays, but this only allows us to combine 
+arrays at the end of one, and at the start of another. Spread syntax makes the following 
+operation extremely simple:
+
+let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
+
+let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
+thatArray would have the value ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 
+'thyme', 'coriander'].
+
+Using spread syntax, we have just achieved an operation that would have been more 
+complex and more verbose had we used traditional methods.
+*/
+
+function spreadOut() {
+    let fragment = ['to', 'code'];
+    let sentence = ['learning',...fragment,'is','fun']; 
+    return sentence;
+}
+
+console.log(spreadOut());
+
+// Check For The Presence of an Element With indexOf()
+/*
+indexOf(), that allows us to quickly and easily check for the presence of an element 
+on an array. indexOf() takes an element as a parameter, and when called, it returns 
+the position, or index, of that element, or -1 if the element does not exist on the 
+array.
+
+For example:
+
+let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+
+fruits.indexOf('dates');
+fruits.indexOf('oranges');
+fruits.indexOf('pears');
+
+indexOf('dates') returns -1, indexOf('oranges') returns 2, and indexOf('pears') 
+returns 1 (the first index at which each element exists).
+*/
+function quickCheck(arr, elem) {
+
+    var result = arr.indexOf(elem);
+    if(result != -1){
+        return true;
+    }
+    else
+        return false;
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+// Iterate Through All an Array's Items Using For Loops
+/*
+JavaScript offers several built in methods that each iterate over arrays in slightly 
+different ways to achieve different results (such as every(), forEach(), map(), etc.), 
+however the technique which is most flexible and offers us the greatest amount of 
+control is a simple for loop.
+
+Consider the following:
+
+function greaterThanTen(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 10) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+
+greaterThanTen([2, 12, 8, 14, 80, 0, 1]);
+Using a for loop, this function iterates through and accesses each element of the array, 
+and subjects it to a simple test that we have created. In this way, we have easily and 
+programmatically determined which data items are greater than 10, and returned a new 
+array, [12, 14, 80], containing those items.
+*/
+
+function filteredArray(arr, elem) {
+    let newArr = [];
+    for(let i = 0; i < arr.length;i ++){
+        if(arr[i].indexOf(elem) == -1)
+        newArr.push(arr[i]);
+    }
+    return newArr;
+}
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+// Create complex multi-dimensional arrays
+/*
+Arrays can contain an infinite depth of arrays that can contain other arrays, each with 
+their own arbitrary levels of depth, and so on. In this way, an array can very quickly 
+become a very complex data structure, known as a multi-dimensional, or nested array. 
+Consider the following example:
+
+let nestedArray = [
+  ['deep'],
+  [
+    ['deeper'], ['deeper'] 
+  ],
+  [
+    [
+      ['deepest'], ['deepest']
+    ],
+    [
+      [
+        ['deepest-est?']
+      ]
+    ]
+  ]
+];
+The deep array is nested 2 levels deep. The deeper arrays are 3 levels deep. The deepest 
+arrays are 4 levels, and the deepest-est? is 5.
+
+While this example may seem convoluted, this level of complexity is not unheard of, 
+or even unusual, when dealing with large amounts of data. However, we can still 
+very easily access the deepest levels of an array this complex with bracket notation:
+
+console.log(nestedArray[2][1][0][0][0]);
+This logs the string deepest-est?. And now that we know where that piece of data 
+is, we can reset it if we need to:
+
+nestedArray[2][1][0][0][0] = 'deeper still';
+
+console.log(nestedArray[2][1][0][0][0]);
+Now it logs deeper still.
+*/
+let myNestedArray = [
+    ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+    ['dogukan',['deep','kaan',24,['deeper','bozkurt',true,['deepest',false]]]],
+    ['loop', 'shift', 6, 7, 1000, 'method'],
+    ['concat', false, true, 'spread', 'array'],
+    ['mutate', 1327.98, 'splice', 'slice', 'push'],
+    ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
+];
