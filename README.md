@@ -10,8 +10,8 @@ Studying codes related to JavaScript programming language on [freeCodeCamp](http
 * [X] Find the Longest Word in a String
 * [X] Return Largest Numbers in Arrays
 * [X] Confirm the Ending
-* [ ] Repeat a String Repeat a String
-* [ ] Truncate a String
+* [X] Repeat a String Repeat a String
+* [X] Truncate a String
 * [ ] Finders Keepers
 * [ ] Boo who
 * [ ] Title Case a Sentence
