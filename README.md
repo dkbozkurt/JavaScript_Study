@@ -4,12 +4,12 @@ Studying codes related to JavaScript programming language on [freeCodeCamp](http
 ---
 
 ## [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-algorithm-scripting)
-* [ ] Convert Celsius to Fahrenheit
-* [ ] Reverse a String
-* [ ] Factorialize a Number
-* [ ] Find the Longest Word in a String
-* [ ] Return Largest Numbers in Arrays
-* [ ] Confirm the Ending
+* [X] Convert Celsius to Fahrenheit
+* [X] Reverse a String
+* [X] Factorialize a Number
+* [X] Find the Longest Word in a String
+* [X] Return Largest Numbers in Arrays
+* [X] Confirm the Ending
 * [ ] Repeat a String Repeat a String
 * [ ] Truncate a String
 * [ ] Finders Keepers
