@@ -12,14 +12,14 @@ Studying codes related to JavaScript programming language on [freeCodeCamp](http
 * [X] Confirm the Ending
 * [X] Repeat a String Repeat a String
 * [X] Truncate a String
-* [ ] Finders Keepers
-* [ ] Boo who
-* [ ] Title Case a Sentence
-* [ ] Slice and Splice
-* [ ] Falsy Bouncer
-* [ ] Where do I Belong
-* [ ] Mutations
-* [ ] Chunky Monkey
+* [X] Finders Keepers
+* [X] Boo who
+* [X] Title Case a Sentence
+* [X] Slice and Splice
+* [X] Falsy Bouncer
+* [X] Where do I Belong
+* [X] Mutations
+* [X] Chunky Monkey
 
 ## [Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
 * [ ] Sum All Numbers in a Range
