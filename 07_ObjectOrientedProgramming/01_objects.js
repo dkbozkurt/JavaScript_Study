@@ -266,3 +266,154 @@ console.log(ownProps);
 The console would display the value ["name", "numLegs"].
 */
 
+function Bird(name) {
+    this.name = name;
+    this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+
+for(let property in canary){
+    if(canary.hasOwnProperty(property)){
+        ownProps.push(property);
+    }
+}
+
+console.log(ownProps);
+
+// Use Prototype Properties to Reduce Duplicate Code
+/*
+Since numLegs will probably have the same value for all instances of Bird, you
+essentially have a duplicated variable numLegs inside each Bird instance.
+
+This may not be an issue when there are only two instances, but imagine if there
+are millions of instances. That would be a lot of duplicated variables.
+
+A better way is to use the prototype of Bird. Properties in the prototype are
+shared among ALL instances of Bird. Here's how to add numLegs to the Bird
+prototype:
+
+Bird.prototype.numLegs = 2;
+
+Now all instances of Bird have the numLegs property.
+
+console.log(duck.numLegs);
+console.log(canary.numLegs);
+
+Since all instances automatically have the properties on the prototype, think of
+a prototype as a "recipe" for creating objects. Note that the prototype for duck
+and canary is part of the Bird constructor as Bird.prototype.
+*/
+
+function Dog(name) {
+    this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+let beagle = new Dog("Snoopy");
+
+// Iterate Over All Properties
+/*
+You have now seen two kinds of properties: own properties and prototype
+properties. Own properties are defined directly on the object instance itself.
+And prototype properties are defined on the prototype.
+
+function Bird(name) {
+  this.name = name;  //own property
+}
+
+Bird.prototype.numLegs = 2; // prototype property
+
+let duck = new Bird("Donald");
+
+Here is how you add duck's own properties to the array ownProps and prototype
+properties to the array prototypeProps:
+
+let ownProps = [];
+let prototypeProps = [];
+
+for (let property in duck) {
+  if(duck.hasOwnProperty(property)) {
+    ownProps.push(property);
+  } else {
+    prototypeProps.push(property);
+  }
+}
+
+console.log(ownProps);
+console.log(prototypeProps);
+
+console.log(ownProps) would display ["name"] in the console, and
+console.log(prototypeProps) would display ["numLegs"].
+*/
+
+function Dog(name) {
+    this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+let beagleTwo = new Dog("Snoopy");
+
+let ownPropsTwo = [];
+let prototypePropsTwo = [];
+
+for(let property in beagleTwo){
+  if(beagle.hasOwnProperty(property)){
+    ownPropsTwo.push(property);
+  }
+  else{
+    prototypePropsTwo.push(property);
+  }
+}
+
+console.log(ownPropsTwo);
+console.log(prototypePropsTwo);
+
+// Understand the Constructor Property
+/*
+There is a special constructor property located on the object instances duck and
+beagle that were created in the previous challenges:
+
+let duck = new Bird();
+let beagle = new Dog();
+
+console.log(duck.constructor === Bird); 
+console.log(beagle.constructor === Dog);
+
+Both of these console.log calls would display true in the console.
+
+Note that the constructor property is a reference to the constructor function
+that created the instance. The advantage of the constructor property is that
+it's possible to check for this property to find out what kind of object it is.
+Here's an example of how this could be used:
+
+function joinBirdFraternity(candidate) {
+  if (candidate.constructor === Bird) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+Note: Since the constructor property can be overwritten (which will be covered
+in the next two challenges) it’s generally better to use the instanceof method
+to check the type of an object.
+*/
+
+function Dog(name) {
+    this.name = name;
+}
+
+function joinDogFraternity(candidate) {
+    if(candidate.constructor == Dog)
+        return true;
+    else
+        return false;
+}
+
+// Change the Prototype to a New Object
+/*
+
+*/
