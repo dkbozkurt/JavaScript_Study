@@ -1,4 +1,4 @@
-//
+// Return Part of an Array Using the slice Method
 /*
 The slice method returns a copy of certain elements of an array. It can take two
 arguments, the first gives the index of where to begin the slice, the second is
