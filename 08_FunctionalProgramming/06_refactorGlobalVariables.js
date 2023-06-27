@@ -41,5 +41,5 @@ function remove(arr,bookName) {
     }
 }
 
-var afterRemove = remove("On The Electrodynamics of Moving Bodies");
+var afterRemove = remove(bookList,"On The Electrodynamics of Moving Bodies");
 console.log(afterRemove);
