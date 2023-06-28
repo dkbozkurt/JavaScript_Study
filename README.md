@@ -22,13 +22,13 @@ Studying codes related to JavaScript programming language on [freeCodeCamp](http
 * [X] Chunky Monkey
 
 ## [Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
-* [ ] Sum All Numbers in a Range
-* [ ] Diff Two Arrays
-* [ ] Seek and Destroy
-* [ ] Wherefore art thou
-* [ ] Spinal Tap Case
-* [ ] Pig Latin
-* [ ] Search and Replace
+* [X] Sum All Numbers in a Range
+* [X] Diff Two Arrays
+* [X] Seek and Destroy
+* [X] Wherefore art thou
+* [X] Spinal Tap Case
+* [X] Pig Latin
+* [X] Search and Replace
 * [ ] DNA Pairing
 * [ ] Missing letters
 * [ ] Sorted Union
