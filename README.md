@@ -45,11 +45,11 @@ Studying codes related to JavaScript programming language on [freeCodeCamp](http
 * [X] Map the Debris
 
 ## [JavaScript Algorithms and Data Structures Projects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#javascript-algorithms-and-data-structures-projects)
-* [ ] Palindrome Checker
-* [ ] Roman Numeral Converter
-* [ ] Caesars Cipher
-* [ ] Telephone Number Validator
-* [ ] Cash Register
+* [X] Palindrome Checker
+* [X] Roman Numeral Converter
+* [X] Caesars Cipher
+* [X] Telephone Number Validator
+* [X] Cash Register
 
 ## [Coding Interview Prep Algorithms](https://www.freecodecamp.org/learn/coding-interview-prep/#algorithms)
 * [ ] Find the Symmetric Difference
