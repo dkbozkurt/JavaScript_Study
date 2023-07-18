@@ -35,14 +35,14 @@ Studying codes related to JavaScript programming language on [freeCodeCamp](http
 * [X] Convert HTML Entities
 * [X] Sum All Odd Fibonacci Numbers
 * [X] Sum All Primes
-* [ ] Smallest Common Multiple
-* [ ] Drop it
-* [ ] Steamroller
-* [ ] Binary Agents
-* [ ] Everything Be True
-* [ ] Arguments Optional
-* [ ] Make a Person
-* [ ] Map the Debris
+* [X] Smallest Common Multiple
+* [X] Drop it
+* [X] Steamroller
+* [X] Binary Agents
+* [X] Everything Be True
+* [X] Arguments Optional
+* [X] Make a Person
+* [X] Map the Debris
 
 ## [JavaScript Algorithms and Data Structures Projects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#javascript-algorithms-and-data-structures-projects)
 * [ ] Palindrome Checker
