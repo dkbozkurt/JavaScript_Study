@@ -29,12 +29,12 @@ Studying codes related to JavaScript programming language on [freeCodeCamp](http
 * [X] Spinal Tap Case
 * [X] Pig Latin
 * [X] Search and Replace
-* [ ] DNA Pairing
-* [ ] Missing letters
-* [ ] Sorted Union
-* [ ] Convert HTML Entities
-* [ ] Sum All Odd Fibonacci Numbers
-* [ ] Sum All Primes
+* [X] DNA Pairing
+* [X] Missing letters
+* [X] Sorted Union
+* [X] Convert HTML Entities
+* [X] Sum All Odd Fibonacci Numbers
+* [X] Sum All Primes
 * [ ] Smallest Common Multiple
 * [ ] Drop it
 * [ ] Steamroller
