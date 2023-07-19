@@ -17,42 +17,34 @@ duplicates).
 
 function sym() {
     var args = arguments;
-    var final = findSymmetricDifference(arguments[0],arguments[1]);
+    var size = args.length;
+
+    if(size <= 1 )
+    {
+        console.log("Not enough input arguments detected!");
+        return;
+    }
+
+    var symmetricDiff = args[0];
     
-    return final;
+    for(let i = 1; i < size; i ++)
+    {
+        var baseSet =[... new Set(symmetricDiff)];
+        var targetSet = [... new Set(args[i])];
+
+        symmetricDiff = findSymmetricDifference(baseSet,targetSet);
+    }
+
+    symmetricDiff.sort();
+    
+    return symmetricDiff;
 }
 
 function findSymmetricDifference(first,second){
-    const [ greaterArray, smallerArray ] =  findGreaterArray(first,second);
-    var resultArray = greaterArray;
-
-    for(let i =0 ; i < resultArray.length;i++)
-    {
-        console.log("i " +i);
-        if(smallerArray.includes(resultArray[i]))
-        {
-            resultArray.pop(i);
-            i--;
-        }
-        else{
-            resultArray.push(smallerArray[i]);
-        }
-    }
-
-    return resultArray;
+    var mergedArray = first.concat(second);
+    var uniqueArray = mergedArray.filter((element, index) => mergedArray.indexOf(element) === mergedArray.lastIndexOf(element));
+    return uniqueArray;
 }
 
-function findGreaterArray(first,second)
-{
-    if(first.length >= second.length)
-    {
-        return [first,second];
-    }
-    else
-    {
-        return [second,first];
-    }
-}
-
-var res = sym([1, 2, 3], [5, 2, 1, 4],[1,6]);
+var res = sym([1, 2, 3,3], [5, 2, 1, 4]);
 console.log(res);
