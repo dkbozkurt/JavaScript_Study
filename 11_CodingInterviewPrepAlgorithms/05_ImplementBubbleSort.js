@@ -24,7 +24,25 @@ greatest.
 */
 
 function bubbleSort(array) {
-    // Only change code below this line
-    return array;
-    // Only change code above this line
-  }
+    let sortedArray = array;
+    let size = sortedArray.length;
+
+    var tempValue;
+
+    for(let i =0; i< size;i++)
+    {
+        for(let j= 0; j< size-1; j ++)
+        {
+            if(sortedArray[j] <= sortedArray[j+1]) continue;
+
+            tempValue = sortedArray[j+1];
+            sortedArray[j+1] = sortedArray[j];
+            sortedArray[j] = tempValue;
+        }
+    }
+
+    return sortedArray;
+}
+
+var res = bubbleSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]);
+console.log(res);
