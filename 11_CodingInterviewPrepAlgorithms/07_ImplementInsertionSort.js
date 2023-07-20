@@ -14,7 +14,26 @@ greatest.
 */
 
 function insertionSort(array) {
-    // Only change code below this line
-    return array;
-    // Only change code above this line
-  }
+    let sortedArray = array;
+    let size= sortedArray.length;
+
+    var tempValue;
+    var targetIndex;
+
+    for(let i =1; i< size;i++)
+    {
+        targetIndex = i;
+        for(let j= i-1; j>= 0; j--)
+        {
+            if(sortedArray[j] < sortedArray[targetIndex]) break;
+
+            tempValue = sortedArray[targetIndex];
+            sortedArray[targetIndex] = sortedArray[j];
+            sortedArray[j] = tempValue;
+            targetIndex = j;
+        }
+    }
+    return sortedArray;   
+}
+var res = insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]);
+console.log(res);
