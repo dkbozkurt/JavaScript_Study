@@ -33,7 +33,39 @@ single-item arrays to feed into merge. Good luck!
 */
 
 function mergeSort(array) {
-    // Only change code below this line
-    return array;
-    // Only change code above this line
-  }
+    let size = array.length;
+
+    if(size <= 1) return array;
+
+    const middle = Math.floor(size / 2);
+    const left = array.slice(0, middle);
+    const right = array.slice(middle);
+
+    return merge(mergeSort(left), mergeSort(right)); 
+}
+
+function merge(left,right)
+{
+    let merged = [];
+    let leftIndex = 0;
+    let rightIndex = 0;
+
+    while (leftIndex < left.length && rightIndex < right.length) {
+        if (left[leftIndex] < right[rightIndex]) {
+        
+            merged.push(left[leftIndex]);
+            leftIndex++;
+        
+        } else {
+        
+            merged.push(right[rightIndex]);
+            rightIndex++;
+        
+        }
+    }
+
+    return merged.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+}
+
+var res = mergeSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]);
+console.log(res);
