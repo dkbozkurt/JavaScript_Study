@@ -52,12 +52,12 @@ Studying codes related to JavaScript programming language on [freeCodeCamp](http
 * [X] Cash Register
 
 ## [Coding Interview Prep Algorithms](https://www.freecodecamp.org/learn/coding-interview-prep/#algorithms)
-* [ ] Find the Symmetric Difference
-* [ ] Inventory Update
-* [ ] No Repeats Please
-* [ ] Pairwise
-* [ ] Implement Bubble Sort
-* [ ] Implement Selection Sort
-* [ ] Implement Insertion Sort
-* [ ] Implement Quick Sort
-* [ ] Implement Merge Sort
+* [X] Find the Symmetric Difference
+* [X] Inventory Update
+* [X] No Repeats Please
+* [X] Pairwise
+* [X] Implement Bubble Sort
+* [X] Implement Selection Sort
+* [X] Implement Insertion Sort
+* [X] Implement Quick Sort
+* [X] Implement Merge Sort
