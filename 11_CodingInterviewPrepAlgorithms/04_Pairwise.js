@@ -23,7 +23,31 @@ Below we'll take their corresponding indices and add them.
 */
 
 function pairwise(arr, arg) {
-    return arg;
-  }
-  
-  pairwise([1,4,2,3,0,5], 7);
+    
+    let usedIndexes = [];
+    let sumOfTheIndexes = 0 ;
+
+    for(let i=0; i < arr.length;i++)
+    {
+        if(usedIndexes.includes(i)) continue;
+
+        for(let j=i+1; j< arr.length;j++)
+        {
+            if(usedIndexes.includes(i) || usedIndexes.includes(j)) continue;
+
+            var sum = arr[i] + arr[j];
+            if( sum === arg)
+            {
+                console.log(i + "" + j);
+                var addition = i+j;
+                sumOfTheIndexes += addition;
+                usedIndexes.push(i);
+                usedIndexes.push(j);
+            }
+        }
+    }
+    return sumOfTheIndexes;
+}
+
+var res = pairwise([0,0,0,0,1,1], 1);
+console.log(res);
