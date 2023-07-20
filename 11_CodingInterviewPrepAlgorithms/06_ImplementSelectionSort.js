@@ -13,7 +13,29 @@ greatest.
 */
 
 function selectionSort(array) {
-    // Only change code below this line
-    return array;
-    // Only change code above this line
-  }
+    let sortedArray = array;
+    let size = sortedArray.length;
+
+    let tempValue;
+    let minValueIndex;
+
+    for(let i =0; i< size;i++)
+    {
+        minValueIndex = i;
+        for(let j= i; j< size; j ++)
+        {
+            if(sortedArray[minValueIndex] < sortedArray[j]) continue;
+
+            minValueIndex = j;
+            
+        }
+        tempValue = sortedArray[i];
+        sortedArray[i] = sortedArray[minValueIndex];
+        sortedArray[minValueIndex] = tempValue;
+    }
+
+    return sortedArray;
+}
+
+var res = selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]);
+console.log(res);
